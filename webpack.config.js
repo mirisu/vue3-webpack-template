@@ -36,7 +36,15 @@ module.exports = {
                     'style-loader',
                     'css-loader',
                     'postcss-loader',
-                    'sass-loader'
+                    {
+                        loader: "sass-loader",
+                        options: {
+                          sourceMap: true,
+                          sassOptions: {
+                            quietDeps: ["node_modules/bootstrap/**/*.scss"],
+                          }
+                        }
+                      }
                 ]
             },
             {
